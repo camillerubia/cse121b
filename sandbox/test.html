@@ -28,8 +28,10 @@
         let removed = names.pop();
         console.log(names);
         console.log(removed);
-        names[0] = removed;
+        names.unshift(removed);
         console.log(names);
+        let count = names.unshift(removed);
+        console.log(count);
 
     </script>
 </body>
