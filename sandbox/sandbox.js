@@ -42,19 +42,35 @@
 // let h =  (g < 10 && g > 0);
 // console.log("Less than 10 and greater than 0:", h);
 
-function getDay(day) {
-    switch (day) {
-        default:
-            return "Not a valid day.";
-            break;
-        case "Monday":
-            return "It's Monday.";
-            break;
-        case "Saturday":
-        case "Sunday":
-            return "Time to relax.";
-            break;
+// function getDay(day) {
+//     switch (day) {
+//         default:
+//             return "Not a valid day.";
+//             break;
+//         case "Monday":
+//             return "It's Monday.";
+//             break;
+//         case "Saturday":
+//         case "Sunday":
+//             return "Time to relax.";
+//             break;
+//     }
+// }
+
+// console.log(getDay("Friday"));
+
+
+
+function sampleFunction() {
+    let randomNumber = Math.random();
+
+    if (randomNumber > 0.5) {
+        return true;
+    } else {
+        return false;
     }
 }
 
-console.log(getDay("Friday"));
+
+console.log(sampleFunction());
+
