@@ -40,23 +40,25 @@ document.querySelector('#food').textContent = favoriteFood;
 
 
 // Step 3: declare and instantiate a variable to hold another favorite food
-let anotherFavorite = ['carbonara', 'milkshake'];
+let anotherFavorite = ['carbonara', 'kimchi', 'milkshake'];
 
 // Step 4: add the variable holding another favorite food to the favorite food array
 const allFood = favoriteFood.concat(anotherFavorite);
+let foodList = allFood.join(", ");
 
 // Step 5: repeat Step 2
-document.querySelector('#food').textContent = allFood;
+document.querySelector('#food').textContent = foodList;
 
 // Step 6: remove the first element in the favorite foods array
 allFood.shift();
+foodList = allFood.join(", ");
 
 // Step 7: repeat Step 2
-document.querySelector('#food').textContent = allFood;
-
+document.querySelector('#food').textContent = foodList;
 
 // Step 8: remove the last element in the favorite foods array
 allFood.pop();
+foodList = allFood.join(", ");
 
 // Step 7: repeat Step 2
-document.querySelector('#food').textContent = allFood;
+document.querySelector('#food').textContent = foodList;
