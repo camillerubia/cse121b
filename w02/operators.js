@@ -33,31 +33,17 @@ function encounter() {
 function isHit() {
     // should return true if a randomly generated number 
     // is greater than .5, false if it is less than .5
-    let randomNumber = Math.random();
-
-    if (randomNumber > 0.5) {
-        return true;
-    } else {
-        return false;
+    return Math.random() > 0.5;
     }
-  }
   
   function shipCanFire() {
     // return true if the ships health is above 0 AND ammo 
     // is above 0 false otherwise
-    if (shipHealth > 0 && shipAmmo > 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return shipHealth > 0 && shipAmmo > 0;
   }
   function isDestroyed(health) {
     // return true if health is zero or less
-    if (health <= 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return health <= 0;
   }
   function reloadShip() {
     // reduce ship health by 1 and increase ammo by 3
