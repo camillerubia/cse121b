@@ -13,10 +13,11 @@ document.body.appendChild(newDiv);
 
 const newSection = document.createElement('section');
 const newH2 = document.createElement('h2');
-const paragraphNew = document.createElement('p');
 newH2.innerText = 'CSE 121b';
-paragraphNew.innerText = 'Welcome to Javascript Language';
-document.body.appendChild(newSection);
 document.body.appendChild(newH2);
+
+const paragraphNew = document.createElement('p');
+paragraphNew.innerText = 'Welcome to Javascript Language';
 document.body.appendChild(paragraphNew);
 
+document.body.appendChild(newSection);
