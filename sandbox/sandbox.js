@@ -61,16 +61,23 @@
 
 
 
-function sampleFunction() {
-    let randomNumber = Math.random();
+// function sampleFunction() {
+//     let randomNumber = Math.random();
 
-    if (randomNumber > 0.5) {
-        return true;
-    } else {
-        return false;
-    }
-}
+//     if (randomNumber > 0.5) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
 
-console.log(sampleFunction());
-
+// console.log(sampleFunction());
+const myArray = [12, 34, 21, 54];
+const luckyNumber = 21;
+let luckyIndex = -1;
+myArray.forEach(function (item, index) {
+  if (item === luckyNumber) {
+    luckyIndex = index;
+  }
+});
