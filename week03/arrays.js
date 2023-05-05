@@ -29,13 +29,20 @@
 // // Activity 3
 // let finalGpa = gpaList.reduce((total, num) => total + num) /gpaList.length;
 
-// Activity 4
-let fruits = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
+// // Activity 4
+// let fruits = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
 
-function charCounter (fruit) {
-    return fruit.length < 6;
-}
+// function charCounter (fruit) {
+//     return fruit.length < 6;
+// }
 
-// const finalFruit = fruits.filter(charCounter);
+// // const finalFruit = fruits.filter(charCounter);
 
-const finalFruit = fruits.filter ((fruit) => fruit.length < 6);
+// const finalFruit = fruits.filter ((fruit) => fruit.length < 6);
+
+// Activity 5
+
+let numbers = [12, 34, 21, 54];
+let luckyNumber = 21;
+
+let doesExist = numbers.indexOf(luckyNumber);
