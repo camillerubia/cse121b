@@ -9,23 +9,33 @@
 
 // Activity 2
 
-const grades = ['A', 'B', 'A'];
+// const grades = ['A', 'B', 'A'];
 
-function convertGrade(grade) {
-    let gpa = 0;
+// function convertGrade(grade) {
+//     let gpa = 0;
 
-    if (grade === 'A') {
-        gpa = 4;
-    }
-    else if (grade === 'B') {
-        gpa = 3;
-    }
-    return gpa;
+//     if (grade === 'A') {
+//         gpa = 4;
+//     }
+//     else if (grade === 'B') {
+//         gpa = 3;
+//     }
+//     return gpa;
+// }
+
+// const gpaList = grades.map(convertGrade);
+// // document.getElementById("myList").innerHTML = grades.map(convertGrade);
+
+// // Activity 3
+// let finalGpa = gpaList.reduce((total, num) => total + num) /gpaList.length;
+
+// Activity 4
+let fruits = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
+
+function charCounter (fruit) {
+    return fruit.length < 6;
 }
 
-const gpaList = grades.map(convertGrade);
-// document.getElementById("myList").innerHTML = grades.map(convertGrade);
+// const finalFruit = fruits.filter(charCounter);
 
-// Activity 3
-let finalGpa = gpaList.reduce((total, num) => total + num) /gpaList.length;
-
+const finalFruit = fruits.filter ((fruit) => fruit.length < 6);
