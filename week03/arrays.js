@@ -18,9 +18,14 @@ function convertGrade(grade) {
         gpa = 4;
     }
     else if (grade === 'B') {
-        gpa = 2;
+        gpa = 3;
     }
     return gpa;
 }
+
+const gpaList = grades.map(convertGrade);
 // document.getElementById("myList").innerHTML = grades.map(convertGrade);
-const finalGpa = grades.map(convertGrade);
+
+// Activity 3
+let finalGpa = gpaList.reduce((total, num) => total + num) /gpaList.length;
+
