@@ -73,11 +73,44 @@
 
 
 // console.log(sampleFunction());
-const myArray = [12, 34, 21, 54];
-const luckyNumber = 21;
-let luckyIndex = -1;
-myArray.forEach(function (item, index) {
-  if (item === luckyNumber) {
-    luckyIndex = index;
-  }
-});
+// const myArray = [12, 34, 21, 54];
+// const luckyNumber = 21;
+// let luckyIndex = -1;
+// myArray.forEach(function (item, index) {
+//   if (item === luckyNumber) {
+//     luckyIndex = index;
+//   }
+// });
+
+
+const buttonElement = document.getElementById("submitButton");
+
+// function copyInput() {
+//   const inputElement = document.getElementById("inputBox");
+//   const outputElement = document.getElementById("output");
+//   outputElement.innerHTML = inputElement.value;
+// }
+
+buttonElement.addEventListener("click", copyInput);
+
+
+//// modify the copyInput callback to receive the event object
+function copyInput(event) {
+  // take a look at the event!
+  console.log(event);
+  const inputElement = document.getElementById("inputBox");
+  const outputElement = document.getElementById("output");
+  outputElement.innerHTML = inputElement.value;
+}
+
+// const log = document.querySelector("#log");
+
+// document.addEventListener("keydown", logKey);
+
+// function logKey(e) {
+//   // how do we know which key was pressed?
+//   console.log(e);
+//   // checkout e.code, e.key, and e.keyCode
+//   // what is the difference?
+// }
+

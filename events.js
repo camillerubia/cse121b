@@ -10,8 +10,12 @@ function newTask() {
   // get the value entered into the #todo input
   // add it to our arrays tasks
   // render out the list.
+    let input = document.getElementById('todo');
+    let tasks = [];
+    tasks.push(input.value);
+    
+    renderTasks(tasks);
 
-  
 }
 
 function removeTask(taskElement) {
