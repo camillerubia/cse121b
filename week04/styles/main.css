@@ -61,6 +61,16 @@ nav ul li a:hover {
     color: black;
 }
 
+img {
+    height: 240px;
+    width: 206px;
+    object-fit: cover;
+}
+
+body ul {
+    text-transform: capitalize;
+}
+
 /* Class Selectors */
 .active {
     background-color: white;

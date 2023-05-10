@@ -27,9 +27,6 @@ const studentPhoto = 'images/camille.png';
 document.querySelector('img').setAttribute('src', studentPhoto);
 document.querySelector('img').setAttribute('alt', photoName);
 
-
-
-
 /* ARRAYS */
 
 // Step 1: declare and instantiate an array variable to hold your favorite foods
