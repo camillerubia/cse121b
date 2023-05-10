@@ -83,25 +83,25 @@
 // });
 
 
-const buttonElement = document.getElementById("submitButton");
+// const buttonElement = document.getElementById("submitButton");
 
-// function copyInput() {
+// // function copyInput() {
+// //   const inputElement = document.getElementById("inputBox");
+// //   const outputElement = document.getElementById("output");
+// //   outputElement.innerHTML = inputElement.value;
+// // }
+
+// buttonElement.addEventListener("click", copyInput);
+
+
+// //// modify the copyInput callback to receive the event object
+// function copyInput(event) {
+//   // take a look at the event!
+//   console.log(event);
 //   const inputElement = document.getElementById("inputBox");
 //   const outputElement = document.getElementById("output");
 //   outputElement.innerHTML = inputElement.value;
 // }
-
-buttonElement.addEventListener("click", copyInput);
-
-
-//// modify the copyInput callback to receive the event object
-function copyInput(event) {
-  // take a look at the event!
-  console.log(event);
-  const inputElement = document.getElementById("inputBox");
-  const outputElement = document.getElementById("output");
-  outputElement.innerHTML = inputElement.value;
-}
 
 // const log = document.querySelector("#log");
 
@@ -114,3 +114,32 @@ function copyInput(event) {
 //   // what is the difference?
 // }
 
+let medications = {
+	'Lactated Ringers' : {'id':'13ab7','amount':100,'amountType':'L','expDate':'12/30/2029'},
+	'Levothyroxine' : {'id':'at342','amount':2000,'amountType':'ct','expDate':'03/18/2021'},
+	'Rosuvastatin' : {'id':'gr5423','amount':1500,'amountType':'ct','expDate':'09/01/2020'},
+	'Albuterol' : {'id':'iuy6532','amount':1325,'amountType':'ct','expDate':'01/01/2023'},
+	'Esomeprazole' : {'id':'mnb78932','amount':23145,'amountType':'ct','expDate':'10/01/2021'}
+}
+
+let aMedication = medications['Lactated Ringers'];
+
+
+let aName = aMedication[0][0];
+let anAmount = aMedication[1][0];
+let anId = aMedication[2][0];
+let anExpirationDate = aMedication[3][0];
+
+
+// let medications = [  ['Lactated Ringers', '13ab7', 100, 'L', '12/30/2029'],
+//   ['Levothyroxine', 'at342', 2000, 'ct', '03/18/2021'],
+//   ['Rosuvastatin', 'gr5423', 1500, 'ct', '09/01/2020'],
+//   ['Albuterol', 'iuy6532', 1325, 'ct', '01/01/2023'],
+//   ['Esomeprazole', 'mnb78932', 23145, 'ct', '10/01/2021']
+// ];
+
+
+// let aName = medications[0][1];
+// let anAmount = medications[1][1];
+// let anId = medications[2][1];
+// let anExpirationDate = medications[3][1];
