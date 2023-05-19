@@ -14,16 +14,14 @@ let getDay;
 // declared in Step 2 to the day of the week ( hint: getDay() )
 getDay = getDate.getDay();
 // getDay = 7;
-console.log(getDay);
 
 // Step 4: Declare a variable to hold a message that will be displayed
 let message;
 
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
 // Step 5: Using an if statement, if the day of the week is a weekday 
 // (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-// const currentDay = days[getDay];
-
 if (getDay > 0 && getDay != 6) {
     message = "Hang in there!";
 }
@@ -31,11 +29,9 @@ if (getDay > 0 && getDay != 6) {
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
 else if (getDay == 0 || getDay == 6) {
     message = "Wohoo! It's the weekend!";
-} if (getDay > 6) {
-    message = "We only have Sundays to Saturdays. An eight day is non-existent."
 }
 
-console.log('First message:');
+// First Message:
 console.log(message);
 
 /* SWITCH, CASE, BREAK */
@@ -77,6 +73,7 @@ function dayOfWeek(day, days) {
     return currentDay;
 }
 
+// Second Message:
 anotherMessage = dayOfWeek(getDay, days);
 console.log(anotherMessage);
 
@@ -124,8 +121,8 @@ function output (list) {
         templeImg.setAttribute('src', list[i].imageUrl);
         templeImg.setAttribute('alt', list[i].templeName);
 
-        // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> 
-        // element as children
+        // - Appends the <h3> element, the two <h4> elements, and the <img> element to 
+        // the <article> element as children
         article.appendChild(name);
         article.appendChild(location);
         article.appendChild(dedication);
@@ -196,17 +193,13 @@ function sortBy() {
             return 0;
         }
     }
-    
-    // - Calls the output function passing in the sorted list of temples
+
     let sortedList = templeList.sort(sorter);
+
+    // - Calls the output function passing in the sorted list of temples
     output(sortedList);
 }
 
 // Step 9: Add a change event listener to the HTML element with an ID of sortBy that 
 // calls the sortBy function
 document.querySelector('#sortBy').addEventListener('change', sortBy);
-
-/* STRETCH */
-
-// Consider adding a "Filter by" feature that allows users to filter the list of temples
-// This will require changes to both the HTML and the JavaScript files
