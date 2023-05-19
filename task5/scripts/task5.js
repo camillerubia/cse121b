@@ -23,7 +23,6 @@ let message;
 // (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 // const currentDay = days[getDay];
-// console.log(currentDay);
 
 if (getDay > 0 && getDay != 6) {
     message = "Hang in there!";
@@ -106,39 +105,38 @@ function output (list) {
     let article = document.createElement('article');
 
     // - Creates an HTML <h3> element and add the temple's templeName property to it
-    let name = document.createElement('h3');
-    temples.templeName = "";
-    name.textContent = temples.templeName;
+    for(var i = 0; i < list.length; i++){
+        let name = document.createElement('h3');
+        name.textContent = list[i].templeName;
 
-    // - Creates an HTML <h4> element and add the temple's location property to it
-    let location = document.createElement('h4');
-    temples.templeLocation = "";
-    location.textContent = temples.templeLocation;
 
-    // - Creates an HTML <h4> element and add the temple's dedicated property to it
-    let dedication = document.createElement('h4');
-    temples.templeDedication = "";
-    dedication.textContent = temples.templeDedication;
+        // - Creates an HTML <h4> element and add the temple's location property to it
+        let location = document.createElement('h4');
+        location.textContent = list[i].templeLocation;
 
-    // - Creates an HTML <img> element and add the temple's imageUrl property to the src 
-    // attribute and the temple's templeName property to the alt attribute
-    let templeImg = document.createElement('img');
-    temples.templeUrl = "";
-    templeImg.setAttribute('src', temples.templeUrl);
-    templeImg.setAttribute('alt', temples.templeName);
+        // - Creates an HTML <h4> element and add the temple's dedicated property to it
+        let dedication = document.createElement('h4');
+        dedication.textContent = list[i].templeDedication;
 
-    // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> 
-    // element as children
-    article.appendChild(name);
-    article.appendChild(location);
-    article.appendChild(dedication);
+        // - Creates an HTML <img> element and add the temple's imageUrl property to the src 
+        // attribute and the temple's templeName property to the alt attribute
+        let templeImg = document.createElement('img');
+        templeImg.setAttribute('src', list[i].imageUrl);
+        templeImg.setAttribute('alt', list[i].templeName);
+
+        // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> 
+        // element as children
+        article.appendChild(name);
+        article.appendChild(location);
+        article.appendChild(dedication);
+        article.appendChild(templeImg);
+    }
 
     // - Appends the <article> element to the HTML element with an ID of temples
     let templeElement = document.getElementById('temples');
     templeElement.append(article);
-
-    console.log("Output - Working");
 }
+
 // Step 3: Create another function called getTemples. Make it an async function.
 async function getTemples() {
 
@@ -147,19 +145,17 @@ async function getTemples() {
     // Create a variable to hold the response from your fetch. You should have the program 
     // wait on this line until it finishes.
     let response = await fetch ('https://byui-cse.github.io/cse121b-course/week05/temples.json');
-
-// Step 5: Convert your fetch response into a Javascript object ( hint: .json() ). 
+    
+    // Step 5: Convert your fetch response into a Javascript object ( hint: .json() ). 
     let data = await response.json();
+    
+    // Store this in the templeList variable you declared earlier (Step 1). Make sure the 
+    // the execution of the code waits here as well until it finishes.
+    templeList = data;
 
-// Store this in the templeList variable you declared earlier (Step 1). Make sure the 
-// the execution of the code waits here as well until it finishes.
-    if (data.ok) {
-        templeList = data;
-    }
-    console.log('Get Temples - Working')
+    // Step 6: Finally, call the output function and pass it the list of temples. 
+    output(templeList);
 }
-// Step 6: Finally, call the output function and pass it the list of temples. 
-output(templeList);
 
 // Execute your getTemples function to make sure it works correctly.
 getTemples();
@@ -174,38 +170,38 @@ function reset() {
 // Step 8: Declare a function named sortBy that does the following:
 function sortBy() {
 
-// - Calls the reset function
+    // - Calls the reset function
     reset();
 
-// - Sorts the global temple list by the currently selected value of the HTML element 
-// with an ID of sortBy
+    // - Sorts the global temple list by the currently selected value of the HTML element 
+    // with an ID of sortBy
     let sortValue = document.getElementById('sortBy').value;
 
     function sorter(x, y) {
         if (sortValue == 'templeNameAscending') {
-            if (x.name < y.name) {
+            if (x.templeName  < y.templeName ) {
                 return -1;
-            }
-            if (x.name > y.name) {
+            }  
+            if (x.templeName  > y.templeName ) {
                 return 1;
             }
             return 0;
         } else if (sortValue == 'templeNameDescending') {
-            if (x.name < y.name) {
+            if (x.templeName  < y.templeName ) {
                 return 1;
             }
-            if (x.name > y.name) {
+            if (x.templeName  > y.templeName ) {
                 return -1;
             }
             return 0;
         }
     }
     
-    
-// - Calls the output function passing in the sorted list of temples
+    // - Calls the output function passing in the sorted list of temples
     let sortedList = templeList.sort(sorter);
     output(sortedList);
 }
+
 // Step 9: Add a change event listener to the HTML element with an ID of sortBy that 
 // calls the sortBy function
 document.querySelector('#sortBy').addEventListener('change', sortBy);
