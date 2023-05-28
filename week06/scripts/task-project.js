@@ -2,9 +2,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // Created a list for subject, verb and objects
-    const subjects = ['The cat', 'My friend', 'The car', 'A dog'];
-    const verbs = ['ate', 'jumped over', 'slept on', 'ran towards'];
-    const objects = ['the table', 'the park', 'the house', 'the beach'];
+    const subjects = ['My sandwich', 'Your pet', 'The plane', 'A duck', "The little girl"];
+    const verbs = ['ate', 'climbed over', 'slept on', 'ran towards', 'laughed'];
+    const objects = ['our fence', 'the park', 'the bowl', 'the beach', 'a comb'];
 
     // store buttons and the container for displaying the words by subject, verb and object
     const dispButton = document.querySelector('.btn-generate');
