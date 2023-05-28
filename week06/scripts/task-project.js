@@ -1,4 +1,4 @@
-// Ensures the functions to run when the website has already loaded.
+// Ensures the functions will run when the website has already loaded.
 document.addEventListener("DOMContentLoaded", () => {
 
     // Created a list for subject, verb and objects
@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         inputSubject.value = "";
         inputVerb.value = "";
         inputObject.value = "";
-        
     });
 
     // Event listener for view button to display the list of words from array and 
