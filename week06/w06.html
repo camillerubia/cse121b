@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Generator</title>
+    <link href="styles/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,800;1,700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="scripts/task-project.js"></script>
+</head>
+<body>
+    <div class="sentence-generator-container">
+        <div class="title-holder">
+            <h1>Random Sentence Generator</h1>
+            <span>Week 6 Project</span>
+        </div>
+        <div class="sentence-content-wrapper">
+            <div class="generator-wrapper">
+                <p class="note">This will display the random sentence:</p>
+                <p class="generated-sentence">
+                    <span class="subject-text"></span>
+                    <span class="verb-text"></span>
+                    <span class="object-text"></span>
+                </p>
+            </div>
+            <button class="btn-generate">Generate</button>
+            <p class="note">Add your own subject, verb and object to the list!</p>
+            <div class="input-fields-wrapper">
+                <div class="subject">
+                    <label>Subject</label>
+                    <input type="text" name="subject" id="subject">
+                </div>
+                <div class="verb">
+                    <label>Verb</label>
+                    <input type="text" name="verb" id="verb">
+                </div>
+                <div class="object">
+                    <label>Object</label>
+                    <input type="text" name="object" id="object">
+                </div>
+            </div>
+            <button class="btn-add">Add</button>
+            <button class="btn-view">View list of words</button>
+            <div class="added-words-wrapper">
+                <h4 class="added-words-title">Added Words:</h4>
+                <p id="addedWords"></p>
+            </div>
+            <div class="show-word-wrapper">
+                <div class="subject-list">
+                    <h4>Subject</h4>
+                </div>
+                <div class="verb-list">
+                    <h4>Verb</h4>
+                </div>
+                <div class="object-list">
+                    <h4>Object</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
