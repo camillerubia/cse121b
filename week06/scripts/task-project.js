@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputVerb = document.getElementById('verb');
     const inputObject = document.getElementById('object');
 
-    // Event listener for Generating the words to the html
+    // Click event listener for generate button for generating the words to the html
     dispButton.addEventListener('click', () => {
         const randomSubject = generateRandomSubject();
         const randomVerb = generateRandomVerb();
@@ -35,14 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
         fadeIn();
     });
 
-    // Event listener for add button to get all the input fields value and adding it 
+    // Event listener for ADD button to get all the input fields value and adding it 
     // on the array
     addWords.addEventListener('click', () => {
         subjects.push(inputSubject.value);
         verbs.push(inputVerb.value);
         objects.push(inputObject.value);
 
-        // Calls the function to display the words from input container at the bottom
+        // Calls the function to display the words from input container beside the Added Words:
         displayAddedWord();
 
         // Clears the input field when button is clicked.
@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
         inputObject.value = "";
     });
 
-    // Event listener for view button to display the list of words from array and 
-    // display it
+    // Event listener for VIEW button to display the list of words from array and 
+    // display it at the bottom
     btnView.addEventListener('click', () => {
         // resets the list container so it won't repeat twice
         document.querySelector(".subject-list").innerHTML = "";
